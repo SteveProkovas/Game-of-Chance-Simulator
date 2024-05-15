@@ -18,6 +18,24 @@
 ## 🎮 Available Games
 
 - **Dice Rolling**: Simulate rolling one or more dice with a specified number of sides on each die.
+
+While the simulator predominantly focuses on probability distributions for simplicity, we can extend its capabilities to incorporate continuous distributions. By leveraging NumPy's capabilities, we can generate random samples from a normal distribution and analyze their statistical properties.
+
+```python
+# Generate random samples from a normal distribution
+samples = np.random.normal(mean, std_deviation, num_samples)
+```
+
+Here, `mean` and `std_deviation` represent the mean and standard deviation of the distribution, while `num_samples` denotes the number of samples to generate. We can then analyze these samples using advanced statistical techniques, unlocking deeper insights into the underlying probability distribution.
+
+```python
+# Analyze the samples using advanced statistical techniques
+mean_sample = np.mean(samples)
+std_deviation_sample = np.std(samples)
+```
+
+The `np.mean()` and `np.std()` functions compute the mean and standard deviation of the generated samples, respectively. These statistics provide valuable insights into the properties of the normal distribution and its relevance to the simulated scenario.
+
 - **Coin Flipping**: Simulate flipping a coin a specified number of times.
 - **Card Drawing**: Simulate drawing a specified number of cards from a standard deck of cards.
 
@@ -32,3 +50,5 @@ Feedback, suggestions, and contributions are always welcome! If you have any ide
 ## 📝 License
 
 This project is licensed under the [Apache License 2.0](LICENSE).
+
+Certainly! Let's integrate the advanced mathematical explanation into the README for the Game of Chance Simulator:
