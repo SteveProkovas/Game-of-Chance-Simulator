@@ -15,9 +15,8 @@
    cd Game-of-Chance-Simulator
    ```
 
-## 🎮 Available Games
 
-- **Dice Rolling**: Simulate rolling one or more dice with a specified number of sides on each die.
+## Dice Rolling
 
 While the simulator predominantly focuses on probability distributions for simplicity, we can extend its capabilities to incorporate continuous distributions. By leveraging NumPy's capabilities, we can generate random samples from a normal distribution and analyze their statistical properties.
 
@@ -36,7 +35,38 @@ std_deviation_sample = np.std(samples)
 
 The `np.mean()` and `np.std()` functions compute the mean and standard deviation of the generated samples, respectively. These statistics provide valuable insights into the properties of the normal distribution and its relevance to the simulated scenario.
 
-- **Coin Flipping**: Simulate flipping a coin a specified number of times.
+## Coin Flipping
+
+This code defines a function `flip_coin` that simulates flipping a coin with a bias towards heads or tails, controlled by probability.
+
+1. **Probability of Heads:**
+   - The function takes an optional `bias` argument, representing the probability of getting heads on a single flip (between 0 and 1).
+   - If no bias is provided, it defaults to 0.5 (fair coin, equal chance of heads or tails).
+2. **Early Termination for Extreme Biases:**
+   - If the `bias` is very close to 0 (almost guaranteed tails) or 1 (almost guaranteed heads), the function avoids unnecessary looping.
+     - It directly returns a dictionary with all tails or all heads depending on the bias.
+3. **Simulating Flips with Randomness:**
+   - The function uses the `random.random()` function to generate random numbers between 0 and 1 for each flip.
+   - It compares this random number to the `heads_probability`:
+     - If the random number is less than `heads_probability` (based on the bias), it counts it as a heads.
+     - This approach leverages the inherent randomness of the `random` module to simulate the coin flips based on the specified probability of heads.
+4. **Tracking Results:**
+   - The function keeps track of the number of heads encountered during the simulation.
+   - Finally, it returns a dictionary containing the number of heads and tails (calculated from total flips and heads count).
+
+**Understanding the Simulation:**
+
+Imagine flipping a coin with a hidden bias. This code simulates that process by:
+
+1. Defining the probability of heads (`heads_probability`).
+2. For each flip:
+   - Generating a random "fate" number between 0 and 1.
+   - If the "fate" number falls within the `heads_probability` range (biased towards heads), it counts as heads.
+   - This reflects the idea that the higher the `heads_probability`, the more likely the random number will fall within that range, resulting in more heads in the simulation.
+
+By repeating this process for the specified number of flips (`num_flips`), the function provides a simulated outcome based on the given probability of heads.
+
+
 - **Card Drawing**: Simulate drawing a specified number of cards from a standard deck of cards.
 
 ## 📊 Educational Purpose
