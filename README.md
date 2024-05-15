@@ -15,6 +15,9 @@
    cd Game-of-Chance-Simulator
    ```
 
+## 📊 Educational Purpose
+
+This program is designed to be educational, allowing users to experiment with different parameters and understand the concept of probability in casino games. It provides a hands-on way to explore probability theory and its application in real-world scenarios.
 
 ## Dice Rolling
 
@@ -67,11 +70,38 @@ Imagine flipping a coin with a hidden bias. This code simulates that process by:
 By repeating this process for the specified number of flips (`num_flips`), the function provides a simulated outcome based on the given probability of heads.
 
 
-- **Card Drawing**: Simulate drawing a specified number of cards from a standard deck of cards.
+## Card Game : Rummi
 
-## 📊 Educational Purpose
+Of course! When writing equations for a README on GitHub, it's best to use Markdown formatting. Here's how you can present the equations in a clear and readable manner:
 
-This program is designed to be educational, allowing users to experiment with different parameters and understand the concept of probability in casino games. It provides a hands-on way to explore probability theory and its application in real-world scenarios.
+1. **Probability of Drawing Specific Cards**:
+
+   ```
+   P(C) = (Number of desired cards in the deck) / (Total number of cards remaining in the deck)
+   ```
+
+   This equation calculates the probability of drawing a specific card from the deck. You divide the number of desired cards (i.e., cards that would benefit the player) by the total number of cards remaining in the deck.
+
+2. **Probability of Completing Melds**:
+
+   ```
+   P(M) = (Number of remaining cards needed to complete meld) / (Total number of cards remaining in the deck)
+   ```
+
+   This equation calculates the probability of completing a specific meld, such as a set or a run. You divide the number of remaining cards needed to complete the meld by the total number of cards remaining in the deck.
+
+3. **Optimal Strategy Based on Probabilities**:
+
+   In a README, you can briefly mention concepts like Expected Value (EV), the Minimax Algorithm, and Monte Carlo Simulation without presenting specific equations. Instead, you can provide a high-level explanation of how these concepts can be applied to make strategic decisions in the game.
+
+   For example:
+   
+   - **Expected Value (EV)**: Calculate the expected value of different actions (e.g., drawing a card, discarding a card) based on their potential outcomes and the probabilities of those outcomes. Choose the action with the highest expected value.
+
+   - **Minimax Algorithm**: Determine the best move that maximizes your chances of winning while minimizing the opponent's chances in a competitive setting.
+
+   - **Monte Carlo Simulation**: Simulate multiple future game states based on different possible actions and their associated probabilities. Evaluate the outcomes of these simulations to inform decision-making.
+
 
 ## 🌟 Feedback and Contributions
 
