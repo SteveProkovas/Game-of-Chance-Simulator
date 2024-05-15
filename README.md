@@ -15,11 +15,6 @@
    cd Game-of-Chance-Simulator
    ```
 
-3. **Run the program:**
-   ```sh
-   python game_of_chance.py
-   ```
-
 ## 🎮 Available Games
 
 - **Dice Rolling**: Simulate rolling one or more dice with a specified number of sides on each die.
