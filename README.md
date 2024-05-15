@@ -72,8 +72,6 @@ By repeating this process for the specified number of flips (`num_flips`), the f
 
 ## Card Game : Rummy
 
-Of course! When writing equations for a README on GitHub, it's best to use Markdown formatting. Here's how you can present the equations in a clear and readable manner:
-
 1. **Probability of Drawing Specific Cards**:
 
    ```
@@ -92,10 +90,6 @@ Of course! When writing equations for a README on GitHub, it's best to use Markd
 
 3. **Optimal Strategy Based on Probabilities**:
 
-   In a README, you can briefly mention concepts like Expected Value (EV), the Minimax Algorithm, and Monte Carlo Simulation without presenting specific equations. Instead, you can provide a high-level explanation of how these concepts can be applied to make strategic decisions in the game.
-
-   For example:
-   
    - **Expected Value (EV)**: Calculate the expected value of different actions (e.g., drawing a card, discarding a card) based on their potential outcomes and the probabilities of those outcomes. Choose the action with the highest expected value.
 
    - **Minimax Algorithm**: Determine the best move that maximizes your chances of winning while minimizing the opponent's chances in a competitive setting.
