@@ -70,7 +70,7 @@ Imagine flipping a coin with a hidden bias. This code simulates that process by:
 By repeating this process for the specified number of flips (`num_flips`), the function provides a simulated outcome based on the given probability of heads.
 
 
-## Card Game : Rummi
+## Card Game : Rummy
 
 Of course! When writing equations for a README on GitHub, it's best to use Markdown formatting. Here's how you can present the equations in a clear and readable manner:
 
