@@ -40,35 +40,38 @@ The `np.mean()` and `np.std()` functions compute the mean and standard deviation
 
 ## Coin Flipping
 
-This code defines a function `flip_coin` that simulates flipping a coin with a bias towards heads or tails, controlled by probability.
+We define four events as follows:
 
-1. **Probability of Heads:**
-   - The function takes an optional `bias` argument, representing the probability of getting heads on a single flip (between 0 and 1).
-   - If no bias is provided, it defaults to 0.5 (fair coin, equal chance of heads or tails).
-2. **Early Termination for Extreme Biases:**
-   - If the `bias` is very close to 0 (almost guaranteed tails) or 1 (almost guaranteed heads), the function avoids unnecessary looping.
-     - It directly returns a dictionary with all tails or all heads depending on the bias.
-3. **Simulating Flips with Randomness:**
-   - The function uses the `random.random()` function to generate random numbers between 0 and 1 for each flip.
-   - It compares this random number to the `heads_probability`:
-     - If the random number is less than `heads_probability` (based on the bias), it counts it as a heads.
-     - This approach leverages the inherent randomness of the `random` module to simulate the coin flips based on the specified probability of heads.
-4. **Tracking Results:**
-   - The function keeps track of the number of heads encountered during the simulation.
-   - Finally, it returns a dictionary containing the number of heads and tails (calculated from total flips and heads count).
+Θ1 = {0 Tails}
 
-**Understanding the Simulation:**
+Θ2 = {1 Tails}
 
-Imagine flipping a coin with a hidden bias. This code simulates that process by:
+Θ3 = {2 Tails}
 
-1. Defining the probability of heads (`heads_probability`).
-2. For each flip:
-   - Generating a random "fate" number between 0 and 1.
-   - If the "fate" number falls within the `heads_probability` range (biased towards heads), it counts as heads.
-   - This reflects the idea that the higher the `heads_probability`, the more likely the random number will fall within that range, resulting in more heads in the simulation.
+Θ4 = {3 Tails}
 
-By repeating this process for the specified number of flips (`num_flips`), the function provides a simulated outcome based on the given probability of heads.
+## Probabilities
+The probabilities for these events are:
 
+Apologies for the confusion. Let's correct that:
+
+| 𝜔𝑖 (Outcome)           | X(𝜔𝑖) (Value) | P(Θ𝑖) (Probability) |
+|-----------------------|--------------|-------------------|
+| HeadsHeadsHeads (𝜔1) | 0            | 1/8               |
+| HeadsHeadsTails (𝜔2) | 1            | 1/8               |
+| HeadsTailsHeads (𝜔3) | 1            | 1/8               |
+| TailsHeadsHeads (𝜔4) | 1            | 1/8               |
+| HeadsTailsTails (𝜔5) | 2            | 1/8               |
+| TailsTailsHeads (𝜔6) | 2            | 1/8               |
+| TailsHeadsTails (𝜔7) | 2            | 1/8               |
+| TailsTailsTails (𝜔8) | 3            | 1/8               |
+
+
+- P(Θ1) = 1/8
+- P(Θ2) = P(Θ3) = 3/8
+- P(Θ4) = 1/8
+
+The sum of probabilities is: ∑𝑖=1^4 P(Θ𝑖) = 1
 
 ## Card Game : Rummy
 
